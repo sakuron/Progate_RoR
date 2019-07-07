@@ -1,11 +1,16 @@
-#「tweet_app」フォルダとその中に実行フォルダとファイルの作成
+#「tweet_app」フォルダとその中に実行フォルダとファイルの作成のコマンド
 rails new tweet_app
 
-#サーバーを起動(ずっと起動し続けておく必要がある)
+#サーバーを起動(ずっと起動し続けておく必要がある)コマンド
 rails server
 
 #Railsの初期画面を立ち上げる
 localhost:3000
 
+#トップページを自動生成するコマンド
+rails generate controller home top
+
+#ブラウザでトップページを表示
+localhost:3000/home/top
 
 
