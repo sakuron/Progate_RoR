@@ -1,0 +1,11 @@
+#「tweet_app」フォルダとその中に実行フォルダとファイルの作成
+rails new tweet_app
+
+#サーバーを起動(ずっと起動し続けておく必要がある)
+rails server
+
+#Railsの初期画面を立ち上げる
+localhost:3000
+
+
+
