@@ -1,16 +1,37 @@
 #「tweet_app」フォルダとその中に実行フォルダとファイルの作成のコマンド
 rails new tweet_app
 
+
 #サーバーを起動(ずっと起動し続けておく必要がある)コマンド
 rails server
+
 
 #Railsの初期画面を立ち上げる
 localhost:3000
 
+
 #トップページを自動生成するコマンド
 rails generate controller home top
+
+①app/view/home/top.html.erb が生成される
+このファイルを書き換えることでトップページが更新される
+
+②app/controllers/home_controller.rd が生成される
+コントローラと同じ名前のフォルダ(home)からアクションと同じ名前のビューファイル(top)を探してブラウザに返す
+
+③tweet_app/config/routes.rd
+URLが送信されるとhomeコントローラのtopアクションで処理されるようになる
+ルーティングに記述されていないURLにアクセスできない
 
 #ブラウザでトップページを表示
 localhost:3000/home/top
 
+#画像の埋め込み（ビューファイル）
+ex: <img class="about-img" src="/images.png">
+
+#画像の埋め込み（CSSファイル）
+ex: background-image: url("images.png")
+
+#localhost:3000でトップページが表示されるようにするルーティング
+get "/" => "home#top"
 
